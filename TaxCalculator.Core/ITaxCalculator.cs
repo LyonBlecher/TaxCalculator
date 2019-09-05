@@ -1,4 +1,4 @@
-﻿namespace TaxCalculator.Core.Services
+﻿namespace TaxCalculator.Core
 {
     public interface ITaxCalculator
     {

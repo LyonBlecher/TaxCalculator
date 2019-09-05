@@ -1,4 +1,6 @@
-﻿namespace TaxCalculator.Core.Datalayer
+﻿using TaxCalculator.Core.Entities;
+
+namespace TaxCalculator.Core.Datalayer
 {
     public interface ITaxCalculatorDb
     {

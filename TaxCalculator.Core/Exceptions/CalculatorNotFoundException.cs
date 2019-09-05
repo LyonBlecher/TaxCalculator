@@ -1,4 +1,5 @@
 ﻿using System;
+using TaxCalculator.Core.Entities;
 
 namespace TaxCalculator.Core.Exceptions
 {

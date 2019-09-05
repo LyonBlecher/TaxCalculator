@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
-using TaxCalculator.Core.Services;
+using TaxCalculator.Core;
 
 namespace TaxCalculator.Api.Controllers
 {

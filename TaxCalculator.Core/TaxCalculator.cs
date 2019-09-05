@@ -1,6 +1,7 @@
-﻿using TaxCalculator.Core.Repository;
+﻿using TaxCalculator.Core.Factory;
+using TaxCalculator.Core.Repository;
 
-namespace TaxCalculator.Core.Services
+namespace TaxCalculator.Core
 {
     public class TaxCalculator : ITaxCalculator
     {

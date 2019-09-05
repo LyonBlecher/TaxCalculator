@@ -1,7 +1,7 @@
 ﻿using System.Data.SqlClient;
 using Dapper;
 using Microsoft.Extensions.Options;
-
+using TaxCalculator.Core.Entities;
 using TaxCalculator.Core.Options;
 
 namespace TaxCalculator.Core.Datalayer

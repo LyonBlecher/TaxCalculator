@@ -10,8 +10,8 @@ using TaxCalculator.Core.Calculators;
 using TaxCalculator.Core.Datalayer;
 using TaxCalculator.Core.Entities;
 using TaxCalculator.Core.Exceptions;
+using TaxCalculator.Core.Factory;
 using TaxCalculator.Core.Repository;
-using TaxCalculator.Core.Services;
 
 namespace TaxCalculator.Tests
 {
@@ -34,7 +34,7 @@ namespace TaxCalculator.Tests
             services.AddTransient<ITaxCalculatorDb>(sp => _mockDb.Object);
             services.AddTransient<ICalculatorFactory, CalculatorFactory>();
             services.AddTransient<ITaxCalculatorRepository, TaxCalculatorRepository>();
-            services.AddTransient<ITaxCalculator, Core.Services.TaxCalculator>();
+            services.AddTransient<ITaxCalculator, Core.TaxCalculator>();
 
             _provider = services.BuildServiceProvider();
 

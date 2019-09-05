@@ -1,8 +1,9 @@
 ﻿using TaxCalculator.Core.Calculators;
+using TaxCalculator.Core.Entities;
 using TaxCalculator.Core.Exceptions;
 using TaxCalculator.Core.Repository;
 
-namespace TaxCalculator.Core.Services
+namespace TaxCalculator.Core.Factory
 {
     public class CalculatorFactory : ICalculatorFactory
     {

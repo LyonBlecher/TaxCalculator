@@ -7,10 +7,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using TaxCalculator.Api.Middleware;
+using TaxCalculator.Core;
 using TaxCalculator.Core.Datalayer;
+using TaxCalculator.Core.Factory;
 using TaxCalculator.Core.Options;
 using TaxCalculator.Core.Repository;
-using TaxCalculator.Core.Services;
 
 namespace TaxCalculator.Api
 {
@@ -45,7 +46,7 @@ namespace TaxCalculator.Api
             services.AddTransient<ITaxCalculatorDb, TaxCalculatorDb>();
             services.AddTransient<ITaxCalculatorRepository, TaxCalculatorRepository>();
             services.AddTransient<ICalculatorFactory, CalculatorFactory>();
-            services.AddTransient<ITaxCalculator, Core.Services.TaxCalculator>();
+            services.AddTransient<ITaxCalculator, Core.TaxCalculator>();
 
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

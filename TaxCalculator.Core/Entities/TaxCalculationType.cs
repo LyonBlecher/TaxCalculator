@@ -1,4 +1,4 @@
-﻿namespace TaxCalculator.Core
+﻿namespace TaxCalculator.Core.Entities
 {
 
     /// <summary>
