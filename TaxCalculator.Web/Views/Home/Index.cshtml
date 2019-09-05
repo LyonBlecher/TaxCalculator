@@ -1,0 +1,52 @@
+﻿@model CalculateModel
+
+<h2>Tax Calculator</h2>
+
+<form asp-action="Index" method="post">
+    <div class="form-group">
+        <label asp-for="PostalCode"></label>
+        <input type="text" class="form-control" asp-for="PostalCode" maxlength="10" placeholder="Enter postal code">
+        <span asp-validation-for="PostalCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Salary"></label>
+        <input asp-for="Salary" type="number" min="0.1" max="10000000000" step="0.01" class="form-control" placeholder="Enter salary">
+        <span asp-validation-for="Salary " class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Calculate</button>
+</form>
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <br/>
+    <div class="text-danger">@Model.ErrorMessage</div>
+}
+@if (Model.Calculated)
+{
+    <h2>Tax Result</h2>
+    <div class="container" style="font-size: 1.5em; margin-left: auto; margin-right: auto; width: 500px;border:1px solid">
+        <div class="row">
+            <div class="col-lg-6" style="font-weight: bold;">
+                Salary
+            </div>
+            <div class="col-lg-6 text-right">
+                @Model.Salary.ToString("C")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" style="font-weight: bold;">
+                Tax Amount
+            </div>
+            <div class="col-lg-6 text-right">
+                @Model.TaxAmount.ToString("C")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" style="font-weight: bold;">
+                Cash Left
+            </div>
+            <div class="col-lg-6 text-right" style="border-top: 1px solid">
+                @Model.CashLeft.ToString("C")
+            </div>
+        </div>
+    </div>
+}

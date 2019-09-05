@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaxCalculator.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TaxCalculator.Api.Controllers.TaxCalculatorController.Calculate(System.Decimal,System.String)">
+            <summary>
+            Calculate tax based on salary and postal code
+            </summary>
+            <param name="salary"></param>
+            <param name="postalCode"></param>
+        </member>
+    </members>
+</doc>
