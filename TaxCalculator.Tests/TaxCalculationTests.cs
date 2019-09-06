@@ -54,6 +54,15 @@ namespace TaxCalculator.Tests
         }
 
         [Test]
+        public void ThrowNullArgumentExceptionIfNullRateInput()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => new ProgressiveCalculator(null));
+
+
+            Assert.AreEqual("rateInput", ex.ParamName);
+        }
+
+        [Test]
         public void CanGetCalculators()
         {
             var calcFlatRate = _calculatorFactory.GetCalculator(TaxCalculationType.FlatRate);

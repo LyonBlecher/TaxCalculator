@@ -8,6 +8,11 @@ namespace TaxCalculator.Core.Calculators
 
         protected Calculator(TRateInput rateInput)
         {
+            if (rateInput == null)
+            {
+                throw new ArgumentNullException(nameof(rateInput));
+            }
+
             RateInput = rateInput;
         }
 
