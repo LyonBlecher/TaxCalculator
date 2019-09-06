@@ -23,9 +23,9 @@
 @if (Model.Calculated)
 {
     <h2>Tax Result</h2>
-    <div class="container" style="font-size: 1.5em; margin-left: auto; margin-right: auto; width: 500px;border:1px solid">
+    <div class="container calc-results">
         <div class="row">
-            <div class="col-lg-6" style="font-weight: bold;">
+            <div class="col-lg-6 val-head">
                 Salary
             </div>
             <div class="col-lg-6 text-right">
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6" style="font-weight: bold;">
+            <div class="col-lg-6 val-head">
                 Tax Amount
             </div>
             <div class="col-lg-6 text-right">
@@ -41,10 +41,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6" style="font-weight: bold;">
+            <div class="col-lg-6 val-head">
                 Cash Left
             </div>
-            <div class="col-lg-6 text-right" style="border-top: 1px solid">
+            <div class="col-lg-6 text-right cash-left">
                 @Model.CashLeft.ToString("C")
             </div>
         </div>
